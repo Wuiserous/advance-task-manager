@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  overflow:hidden;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+.grid-container-ex {
+  display: grid;
+  grid-template-columns: 120px 1415px 60px 1fr;
+  transition: grid-template-columns 0.3s ease; /* Smooth animation */
+}
+
+.grid-container-co {
+  display: grid;
+  grid-template-columns: 120px 1030px 60px 1fr;
+  transition: grid-template-columns 0.3s ease; /* Smooth animation */
+}
+
+.expanded-task {
+  display: grid;
+  grid-template-columns: 50px 1485px 60px 1fr;
+  transition: grid-template-columns 0.5s ease; /* Smooth animation */
+}
+
+.collapsed-task {
+  display: grid;
+  grid-template-columns: 50px 1100px 60px 1fr;
+  transition: grid-template-columns 0.5s ease; /* Smooth animation */
+}
+
+.hide-scrollbar {
+  overflow: scroll; /* Allows scrolling */
+  scrollbar-width: none; /* For Firefox */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Edge */
+}
+
+.grabbable {
+  cursor: grab; /* Open hand */
+  user-select: none; /* Prevent text selection */
+}
+
+/* When grabbing */
+.grabbable:active {
+  cursor: grabbing; /* Closed fist */
+}
+
+
+
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
