@@ -3,7 +3,7 @@ import { useContext } from 'react';
 import TaskCard from './TaskCard';  
 
 export default function TaskSpace() {
-    const {bgColor, expand, isDark, tasks, setMoreOptions} = useContext(ThemeContext);
+    const {expand, isDark, tasks, setMoreOptions} = useContext(ThemeContext);
 
     const cards = tasks;
 
